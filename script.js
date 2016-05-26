@@ -1,4 +1,6 @@
+
 /*var sala1 = document.getElementsByTagName("li")[0];
+var sala1 = document.getElementsByTagName("li")[0];
 var sala2 = document.getElementsByTagName("li")[1];
 var sala3 = document.getElementsByTagName("li")[2];
 
@@ -23,9 +25,11 @@ sala3.onclick = function (params) {
 
 function mudaTexto(str) {
     texto.innerHTML = padrao + str;
+
 }*/
 
 $(function(){
     $('#menu').menu();
     
 });
+
