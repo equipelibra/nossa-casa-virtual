@@ -1,21 +1,3 @@
-#bemvindo {
-    text-align: center;
-
+div{
+    display: none;
 }
-
-#menu {
-    box-sizing: border-box;
-}
-
-ul.parent > li{
-    float: left;
-    width : 20%;
-    text-align: center;
-}
- ul.child{
-     box-sizing: border-box;
-     display: block;
-     
- }
-
-

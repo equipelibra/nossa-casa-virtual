@@ -2,46 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nossa Casa Virtual</title>
-    <link rel="stylesheet" type="text/css" href="jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="estilo.css"/>
-    <script src="easeljs-0.8.2.combined.js"></script>
-    <script src="jquery-1.12.4.js"></script>
-    <script src="jquery-ui.js"></script>
-</head>
-<body>
-    <ul id="menu" class="parent">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3
-             <ul class="children">
-               <li>Item 3.1</li>
-               <li>Item 3.2</li>
-               <li>item 3.3</li>    
-             </ul>
-       </li>
-       <li>Item 4</li>
-    </ul>
+    <title>Teste</title>
     
-   <canvas id="canvas" width="1000" height="800" style="border: 1px solid #000000;">
-    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    
+    <script src="js/jquery-1.12.4.js"></script>
+    
+    
 </head>
 <body>
-    <div id="bemvindo">
+    <div id="titulo">
         <h1>Nossa Casa Virtual</h1>
-        <p>Clique nos numeros para visitar as salas.</p>
     </div>
-    <div id="hub">
-        <ul>
-            <li>Sala 1</li>
-            <li>Sala 2</li>
-            <li>Sala 3</li>
-        </ul>
-    </div>
-    <div id="abaixo">
-        <h3 id="salaAtual">Voce esta na sala: </h3>
-    </div>
->>>>>>> a85d8d6d395c212e2e7c25c9a3a36e3a9fe960f7
-    <script src="script.js"></script>    
+   
+   <div id="escolha">
+       <h3>Esta é sua primeira visita?</h3>
+       <button id="sim">Sim</button>
+       <button id="nao">Não</button>
+   </div>
+       
+       <div id="hub">
+           <h2>Mapa Principal</h2>
+           <button id="btn-memorial">Memorial</button>
+           <button id="btn-radio-tv">Radio/Tv</button>
+           <button id="btn-teatro">Teatro</button>
+       </div>
+       
+       <div class="sala" id="memorial">
+           <h2>Memorial</h2>
+           <p id="fala-do-guia-memorial">
+               foo
+               </p>
+       </div>
+       
+       <div id="radio-tv" class="sala">
+               <h2>Radio/TV</h2>
+               <button id="btn-radio">Ir para a Rádio</button>
+               <button id="btn-tv">Ir para a TV</button>
+        </div>
+        
+           <div id="radio">
+               <h3>Radio</h3>
+               <p class="fala-1-0">
+               Este é o laboratório de rádio da fundação, a Casa Grande FM. 
+               Aqui temos licença para funcionar como uma rádio comunitária, 
+               onde todo o conteúdo é produzido pelas crianças e jovens da fundação, 
+               com participação da comunidade.
+               </p>
+               
+            <p class="fala-2-1">Aqui as crianças e jovens da Fundação são capacitadas a atuar nas diversas áreas
+                 que compõem a produção, o gerenciamento e a manutenção de uma estação de rádio real.</p>
+                 
+             <p class="fala-2-2">Eles aprendem a utilizar os diversos recursos comunicativos 
+                 sem necessariamente se formarem comunicadores.</p>
+             
+             <p class="fala-2-3">O ensino, que é na maior parte prático, 
+                 abrange criação de roteiro, edição de áudio e até sonoplastia. 
+                 Tudo aqui é operado por crianças e jovens de maneira completamente independente.</p>
+                 
+             
+             <p class="fala-3-1">O SerTão Sonoro produz, através de um processo formativo, 
+                 programas radiofônicos sobre o Patrimônio Cultural Imaterial da Microrregião do Cariri, 
+                 situado no Sul do Ceará. O projeto capta e difunde histórias do Patrimônio através dos mestres, 
+                 das celebrações, manifestações artístico-culturais e dos modos de criar, fazer e viver da região.
+                 </p>
+              
+              <p class="fala-3-2">Veja o vídeo e ouça alguns dos programas.</p>
+
+           </div>
+           
+           <div id="tv">
+               <h3>TV</h3>
+               <p class="fala-1-0">Esta é a TV Casa grande, pensada por um garoto do sertão 
+                   e materializada em 1997.</p>
+                
+                <p id="fala-2-0">foo</p>
+           </div>
+           
+           
+       
+       
+       <div id="teatro">
+           <h2>Teatro</h2>
+           <p class="fala-1-0">foo</p>
+       </div>
+       
+       <div id="voltar">
+           <button>Voltar</button>
+       </div>
+       <div id="prox">Proximo</div>
+   
+    
+    <script src="script.js"></script>
 </body>
 </html>
