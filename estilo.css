@@ -1,7 +1,9 @@
 
-
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
 #voltar{
-    position: fixed;
+    position:absolute;
     right: 15px;
     top: 25px;
     margin-right: 20.1%;
@@ -96,4 +98,37 @@
   background-image: url(img/teatro.png);
   background-size: 150px 96px;
   background-repeat: no-repeat;
+}
+
+p{
+    position: absolute;
+    margin-left: 22%;
+    margin-right: 20%;
+    top: 480px;
+    color: white;
+}
+
+#prox{
+    position: absolute;
+    margin-right: 20.1%;
+    right: 15px;
+    top: 570px;
+}
+
+#btn-radio{
+     position: absolute;
+    top: 300px;
+    margin-left:20%;
+    left: 294px;
+    text-align: center;
+    color: black;
+}
+
+#btn-tv{
+     position: absolute;
+    top: 300px;
+    margin-right:20%;
+    right: 294px;
+    text-align: center;
+    color: black;
 }

@@ -2,6 +2,7 @@ var titulo;
 var salaAtual;
 var salaAnterior;
 var modoGuia;
+var paragrafoMostrado = 1;
 
 //declaracao dos objetos (divs).
 var principal = {
@@ -55,6 +56,7 @@ function mostraHub()
 {
         $("#escolha").hide();
         $("#voltar").hide();
+        
         $(".menu").show();
         $("#hub").show();
         salaAtual = principal;
@@ -73,6 +75,13 @@ function escondeVoltar(){
     $("#voltar").hide();
 }
 
+function mostraProximo(){
+    $("#prox").show();
+}
+
+function escondeProximo(){
+    $("#prox").hide();
+}
 //funcao que muda a sala para a sala anterior.
 function voltar()
 {
@@ -106,10 +115,20 @@ function mudaSala(sala)
     $(salaAtual.id).hide();
     salaAnterior = sala.salaPai;
     salaAtual = sala;
-    
+    paragrafoMostrado =1;
     $(sala.id).show();
     checaSala();
+    $(sala.id).find("p").hide();
+    $(sala.id).find(".fala-"+paragrafoMostrado).show();
     
+    
+}
+function checaProx()
+{
+    if($(salaAtual.id).children("p").length >= 1)
+        return true;
+    else
+        return false;
 }
 
 function checaSala(){
@@ -117,10 +136,21 @@ function checaSala(){
        mostraVoltar();
     else
        escondeVoltar();   
+    if($(salaAtual.id).children("p").length > 1)
+        mostraProximo();
+    else
+        escondeProximo();
 }
 
 
-
+function proximo(){
+   $(salaAtual.id).find(".fala-"+paragrafoMostrado).hide();
+   paragrafoMostrado++;
+   $(salaAtual.id).find(".fala-"+paragrafoMostrado).show();
+   if(paragrafoMostrado >= $(salaAtual.id).children("p").length)
+       escondeProximo();
+}
+escondeProximo();
 $("#titulo").fadeIn(1000).fadeOut(1000,init);
 $("#btn-memorial").click(function(){
     mudaSala(memorial);
@@ -140,3 +170,5 @@ $("#btn-tv").click(function(){
     mudaSala(tv);
 });
 $("#voltar").find("button").click(voltar);
+
+$("#prox").click(proximo);
