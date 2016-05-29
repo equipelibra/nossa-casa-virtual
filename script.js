@@ -32,6 +32,7 @@ var teatro = {
 }
 
 $("div").hide();
+$(".fundo").show();
 
 //funcao de inicializacao do  app;
 function init() {
@@ -54,6 +55,7 @@ function mostraHub()
 {
         $("#escolha").hide();
         $("#voltar").hide();
+        $(".menu").show();
         $("#hub").show();
         salaAtual = principal;
         salaAnterior = salaAtual;
